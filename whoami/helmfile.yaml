@@ -1,0 +1,10 @@
+---
+helmDefaults:
+  tillerNamespace: '{{ requiredEnv "TILLER_NAMESPACE" }}'
+  tillerless: true
+
+releases:
+  - name: whoami
+    namespace: test
+    chart: .
+    version: 0.1.0
